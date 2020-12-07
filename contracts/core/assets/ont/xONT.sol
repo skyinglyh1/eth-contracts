@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 
 import "./../../../libs/token/ERC20/ERC20Detailed.sol";
 import "./../../../libs/GSN/Context.sol";

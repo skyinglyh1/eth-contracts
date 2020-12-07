@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 import "./../../../libs/common/ZeroCopySource.sol";
 import "./../../../libs/common/ZeroCopySink.sol";
 import "./../../../libs/utils/Utils.sol";

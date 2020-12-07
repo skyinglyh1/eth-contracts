@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 
 import "./../../libs/ownership/Ownable.sol";
 import "./../../libs/common/ZeroCopySource.sol";
@@ -154,18 +154,18 @@ contract LockProxy is Ownable {
         return true;
     }
     
-    
     function _transferERC20ToContract(address fromAssetHash, address fromAddress, address toAddress, uint256 amount) internal returns (bool) {
-         IERC20 erc20Token = IERC20(fromAssetHash);
+        IERC20 erc20Token = IERC20(fromAssetHash);
         //  require(erc20Token.transferFrom(fromAddress, toAddress, amount), "trasnfer ERC20 Token failed!");
-         erc20Token.safeTransferFrom(fromAddress, toAddress, amount);
-         return true;
+        erc20Token.safeTransferFrom(fromAddress, toAddress, amount);
+        return true;
     }
+
     function _transferERC20FromContract(address toAssetHash, address toAddress, uint256 amount) internal returns (bool) {
-         IERC20 erc20Token = IERC20(toAssetHash);
+        IERC20 erc20Token = IERC20(toAssetHash);
         //  require(erc20Token.transfer(toAddress, amount), "trasnfer ERC20 Token failed!");
-         erc20Token.safeTransfer(toAddress, amount);
-         return true;
+        erc20Token.safeTransfer(toAddress, amount);
+        return true;
     }
     
     function _serializeTxArgs(TxArgs memory args) internal pure returns (bytes memory) {

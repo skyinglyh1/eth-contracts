@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 import "./../../../libs/ownership/Ownable.sol";
 import "./../../../libs/lifecycle/Pausable.sol";
 import "./../interface/IEthCrossChainData.sol";
